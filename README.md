@@ -1,56 +1,104 @@
-Resume Analyzer
+AI Resume Analyzer
 
-Live demo: https://resumeanalyzer-flame.vercel.app/
+An intelligent resume-analysis web application that helps job-seekers instantly understand the strengths and weaknesses of their résumé.
+Users can upload their resume and receive AI-generated insights, summaries, skills extraction, and improvement suggestions — all inside a fast and clean UI.
 
-A clean, user-friendly web app to upload a résumé/CV and quickly get actionable insights — skills extracted, keyword highlights, and a concise summary to help you tailor applications and improve your resume.
+Live app: https://resumeanalyzer-flame.vercel.app/
 
-Features
+Overview
 
-Upload resume (PDF / DOCX / TXT).
+AI Resume Analyzer processes a résumé (PDF/DOCX/TXT) using an AI-powered analysis pipeline.
+The application extracts important information, highlights missing elements, evaluates skill relevance, and produces an overall improvement report that users can apply instantly.
 
-Automatic extraction of key skills, experience highlights, and contact info.
+This project is designed to help:
 
-Readability and keyword-match suggestions for job descriptions.
+Job seekers preparing for interviews
 
-Downloadable analysis report.
+Students and freshers who want to optimize their resumes
 
-Responsive UI and fast client-side interactions.
+Professionals switching careers
 
-Tech stack
+Recruiters who want a quick understanding of candidate profiles
 
-Frontend: React (Vite / Create React App / Next.js — adjust to your setup)
+Key Features
+1. Resume Upload
 
-Styling: CSS / Tailwind (update if different)
+Supports PDF, DOCX, and plain text formats.
 
-Hosting / Deployment: Vercel
+Client-friendly drag-and-drop upload area.
 
-For deployment on Vercel:
+2. AI-Powered Content Extraction
 
-Connect your GitHub repo to Vercel.
+Extracts key details:
 
-Set any environment variables in Vercel dashboard.
+Skills
 
-Deploy — Vercel will handle builds automatically.
+Experience highlights
 
-Project structure (example)
-src/
-  components/
-  pages/ or routes/
-  assets/
-  styles/
-public/        
+Education
 
+Contact information
 
-Put component-tied images inside src/assets and import them. Put static public files in public/ and reference with /path.
+Achievements
+
+Tools/tech stack
+
+3. Relevance & Quality Analysis
+The AI evaluates:
+Resume clarity
+Keyword match (ATS friendliness)
+Section completeness
+Skill relevance to typical job openings
+
+Readability & formatting impact
+
+4. Improvement Suggestions
+
+Generates:
+
+Weak points
+
+Recommended keywords
+
+Section enhancement suggestions
+
+Actionable resume rewrite ideas
+
+5. Summary Generation
+
+Produces a short, professional summary of the candidate profile—ideal for LinkedIn, job portals, and cover letters.
+
+6. Clean & Responsive UI
+
+Modern layout
+
+Fast interactions
+
+Mobile-optimized
+
+Tech Stack
+Layer	Tools
+Frontend	React (Vite / Next.js / CRA — update based on your setup)
+Styling	Tailwind CSS / Custom CSS
+AI	API-based LLM resume analysis (OpenAI/Groq/Gemini etc. depending on your setup)
+Deployment	Vercel
+
+How It Works (Internally)
+
+User uploads resume
+File content is extracted using a parser (PDF → text, DOCX → text)
+The cleaned content is sent to an LLM with a structured prompt
+AI returns:
+Skills list
+
+Summary
+Improvements
+Missing keywords
+ATS score-style insights
+UI displays the results in a structured and readable format
+
 
 Credits
 
-Big thanks and credit to JavaScript Mastery — their tutorials and starter templates are an excellent resource and inspiration for many frontend projects.
-
-Any other libraries and resources used are credited inside package.json and the project source.
-
-
-Contact
-
-Created by Balli Sarath Kumar.
-Email: sarathkumarballi@gmail.com
+This project is inspired by tutorials, UI ideas, and workflow patterns from JavaScript Mastery.
+Their content helped shape the frontend structure and guided the development style for this application.
